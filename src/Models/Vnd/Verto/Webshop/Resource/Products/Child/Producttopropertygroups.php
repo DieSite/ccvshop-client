@@ -21,6 +21,9 @@ class Producttopropertygroups implements Model
      */
     private ?string $href;
 
+
+    private array $collection;
+
     public static function fromArray(array $data): static
     {
         return static::createFromArray($data);
@@ -41,6 +44,17 @@ class Producttopropertygroups implements Model
     public function setHref(?string $href): self
     {
         $this->href = $href;
+        return $this;
+    }
+
+    public function getCollection(): array
+    {
+        return $this->collection;
+    }
+
+    public function setCollection(\JacobDeKeizer\Ccv\Models\Vnd\Verto\Webshop\Resource\Producttopropertygroups\Producttopropertygroups ...$collection): self
+    {
+        $this->collection = $collection;
         return $this;
     }
 }
